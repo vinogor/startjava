@@ -6,7 +6,7 @@ public class Unicode {
 
     	while (s != '\u0126'){
     		System.out.print(s + " ");
-    		s++;
+    		s++; 
     	}
 
     }

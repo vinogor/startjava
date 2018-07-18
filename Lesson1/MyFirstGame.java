@@ -11,7 +11,7 @@ public class MyFirstGame {
 	    		System.out.println("2 Введенное вами число больше того, что загадал компьютер");
 	    	else {
 	    		System.out.println("3 Вы угадали!");
-	    //		break;
+	    //		break; 
 	    //	}
     	}
 	}
