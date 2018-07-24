@@ -1,30 +1,18 @@
 public class MyFirstGame {
     public static void main(String[] args) {
     	int inputNumber = -10;
+    	int computerNumber = 3;
     	while (true) {
-		    if (inputNumber < 0) {
-		    	System.out.println("1 Введенное вами число меньше того, что загадал компьютер");
-		    	inputNumber ++;
-		    }
-		    else if  (inputNumber > 100) {
-		    	System.out.println("2 Введенное вами число больше того, что загадал компьютер");
-		    	inputNumber --;
-		    }
-		    else {
-		    	System.out.println("3 Вы угадали!");
-		    	break; 
+		    if (inputNumber < computerNumber) {
+		    	System.out.println("Введённое вами число [" + inputNumber + "] меньше того, что загадал компьютер");
+		    	inputNumber++;
+		    } else if (inputNumber > computerNumber) {
+		    	System.out.println("Введённое вами число [" + inputNumber + "] больше того, что загадал компьютер");
+		    	inputNumber--;
+		    } else {
+		    	System.out.println("Вы угадали! Компьютер загадал: " + inputNumber);
+		    	break;
 	    	}
-	    }
+	    } 
 	}
 }
-
-/* ВОПРОСЫ
-
-1. НЕ ПОЛУЧАЕТСЯ РЕШИТЬ - Почему вместо например фразы "Вы угадали!" выводится "Р?С? С?Р?Р°Р?Р°Р?Рё!" 
-2. РЕШЕНО - Как реализовать условие задачи "игра продолжается до тех пор, пока число не будет угадано", если
-ввод с клавиатуры сказано пока не использовать? Если раскомментировать цикл while и добавить ввод,
-то должно работать пока не отгадается число. 
- 
-*/
-
-

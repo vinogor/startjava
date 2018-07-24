@@ -1,19 +1,8 @@
 public class Unicode {
     public static void main(String[] args) {
-    	for (char symbolUnicode = 33; symbolUnicode <= 126 ; symbolUnicode++ ) 
-    	{
+    	for (char symbolUnicode = 33 ; symbolUnicode <= 126 ; symbolUnicode++) {
     		System.out.print(symbolUnicode + " ");
     	}
     }
 }
 
-
-/* ВОПРОСЫ
-
-1. РЕШЕНО - Почему в диапазоне [33, 126] - часть символов в виде знака вопроса? Как это исправить?
-2. РЕШЕНО - Почему если писать '\u10178' (пять вместо четырёх символов), то компилятор выдаёт ошибки?
-Типо javac ожидает 8битное выражение, а мне получается надо 16ти... Как это исправить?
- 
-3. Почему в диапазоне [9398, 10178] - часть символов в виде знака вопроса? Как это исправить?
-
-*/   

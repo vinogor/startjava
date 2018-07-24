@@ -1,30 +1,25 @@
 public class Calculator {
     public static void main(String[] args) {
-		int firstInputNumber = 4;
-		int secondInputNumber = 10;
-		int resultOfСalculation = 1; // = 1 - чтобы работало возведение в степень 
-		String mathOperation = "^";
+		int firstNumber = 4;
+		int secondNumber = 10;
+		String mathOperation = "*";
 		if (mathOperation.equals("+")) {
-			resultOfСalculation = firstInputNumber + secondInputNumber;
-		}
-		else if (mathOperation.equals("-")) {
-			resultOfСalculation = firstInputNumber - secondInputNumber;
-		}
-		else if (mathOperation.equals("*")) {
-			resultOfСalculation = firstInputNumber * secondInputNumber;
-		}
-		else if (mathOperation.equals("/")) {
-			resultOfСalculation = firstInputNumber / secondInputNumber;
-		}
-		else if (mathOperation.equals("%")) {
-			resultOfСalculation = firstInputNumber % secondInputNumber;
-		}
-		else if (mathOperation.equals("^")) {
-			for (int i = 0; i < secondInputNumber; i++) {
-				resultOfСalculation *= firstInputNumber;
+			System.out.println(firstNumber + secondNumber);
+		} else if (mathOperation.equals("-")) {
+			System.out.println(firstNumber - secondNumber);
+		} else if (mathOperation.equals("*")) {
+			System.out.println(firstNumber * secondNumber);
+		} else if (mathOperation.equals("/")) {
+			System.out.println(firstNumber / secondNumber);
+		} else if (mathOperation.equals("%")) {
+			System.out.println(firstNumber % secondNumber);
+		} else if (mathOperation.equals("^")) {
+			int resultOfСalculation = 1; // = 1 - чтобы работало возведение в степень 
+			for (int i = 0; i < secondNumber; i++) {
+				resultOfСalculation *= firstNumber;
 			}
+			System.out.println(firstNumber + " " + mathOperation + " " + secondNumber + " = " + resultOfСalculation);
 		}
-		System.out.println(firstInputNumber + " " + mathOperation + " " + secondInputNumber + " = " + resultOfСalculation);
  	}
 }
 
