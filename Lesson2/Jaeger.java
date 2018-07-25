@@ -1,7 +1,5 @@
 public class Jaeger {
-	
 
-	// переменные экземпляра
 	private String modelName;
 	private String mark;
 	private float height;
@@ -9,23 +7,32 @@ public class Jaeger {
 	private int speed;
 	private int strength;
 	
-	public void setModelName (String mn) {
-		modelName = mn;
+	public void setModelName (String modelName) {
+		this.modelName = modelName;
 	}
-	public void setMark (String m) {
-		mark = m;
+
+	public String getModelName () {
+		return modelName;
+	}	
+
+	public void setMark (String mark) {
+		this.mark = mark;
 	}
-	public void setHeight (float h) {
-		height = h;
+
+	public void setHeight (float height) {
+		this.height = height;
 	}
-	public void setWeight (float w) {
-		weight = w;
+
+	public void setWeight (float weight) {
+		this.weight = weight;
 	}
-	public void setSpeed (int sp) {
-		speed = sp;
+
+	public void setSpeed (int speed) {
+		this.speed = speed;
 	}
-	public void setStrenght (int sr) {
-		strength = sr;
+
+	public void setStrenght (int strength) {
+		this.strength = strength;
 	}
 
 	void drift() {

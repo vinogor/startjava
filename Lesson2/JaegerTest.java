@@ -1,26 +1,29 @@
 public class JaegerTest {
     public static void main(String[] args) {
-		Jaeger one = new Jaeger();
-		one.setModelName("Crimson Typhoon"); // http://pacificrim.wikia.com/wiki/Crimson_Typhoon_(Jaeger)
-		one.setMark("Mark-4");
-		one.setHeight(76.2f);		
-		one.setWeight(1722f);
-		one.setSpeed(9);
-		one.setStrenght(8);
-		one.drift();
+		Jaeger crimsonTyphoon = new Jaeger();
+		crimsonTyphoon.setModelName("Crimson Typhoon"); // http://pacificrim.wikia.com/wiki/Crimson_Typhoon_(Jaeger)
+		crimsonTyphoon.setMark("Mark-4");
+		crimsonTyphoon.setHeight(76.2f);		
+		crimsonTyphoon.setWeight(1722f);
+		crimsonTyphoon.setSpeed(9);
+		crimsonTyphoon.setStrenght(8);
+		crimsonTyphoon.drift();
 
+		System.out.println();
 		System.out.println("А теперь увеличим скорость на +2: ");
-		one.setSpeed(9+2);
-		one.drift();
+		crimsonTyphoon.setSpeed(9+2);
+		crimsonTyphoon.drift();
 
+		Jaeger gipsyDanger = new Jaeger();
+		gipsyDanger.setModelName("Gipsy Danger"); // http://pacificrim.wikia.com/wiki/Gipsy_Danger_(Jaeger)
+		gipsyDanger.setMark("Mark-3");
+		gipsyDanger.setHeight(79.25f);		
+		gipsyDanger.setWeight(1980f);
+		gipsyDanger.setSpeed(7);
+		gipsyDanger.setStrenght(8);
+		gipsyDanger.drift();
 
-		Jaeger two = new Jaeger();
-		two.setModelName("Gipsy Danger"); // http://pacificrim.wikia.com/wiki/Gipsy_Danger_(Jaeger)
-		two.setMark("Mark-3");
-		two.setHeight(79.25f);		
-		two.setWeight(1980f);
-		two.setSpeed(7);
-		two.setStrenght(8);
-		two.drift();
+		System.out.println("имя первого робота: " + crimsonTyphoon.getModelName());
+		System.out.println("имя второго робота: " + gipsyDanger.getModelName());
     }
 }
