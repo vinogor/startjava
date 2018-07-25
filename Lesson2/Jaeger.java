@@ -7,13 +7,22 @@ public class Jaeger {
 	private int speed;
 	private int strength;
 	
-	public void setModelName (String modelName) {
-		this.modelName = modelName;
-	}
-
 	public String getModelName () {
 		return modelName;
 	}	
+
+	public Jaeger(String modelName, String mark, float height, float weight, int speed, int strength) {
+		this.modelName = modelName;
+		this.mark = mark;
+		this.height = height;
+		this.weight = weight;
+		this.speed = speed;
+		this.strength = strength;
+	}
+
+/*	public void setModelName (String modelName) {
+		this.modelName = modelName;
+	}
 
 	public void setMark (String mark) {
 		this.mark = mark;
@@ -35,6 +44,7 @@ public class Jaeger {
 		this.strength = strength;
 	}
 
+*/
 	void drift() {
 		System.out.println("Название модели: " + modelName);
 		System.out.println("Марка: " + mark);

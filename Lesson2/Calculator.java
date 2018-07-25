@@ -1,15 +1,25 @@
-import java.util.Scanner;
-
 public class Calculator {
 
 	private int firstNumber;
 	private String mathOperation;
 	private int secondNumber;
 
-	public Calculator(int firstNumber, String mathOperation, int secondNumber) {
-		this.firstNumber = firstNumber;
-		this.mathOperation = mathOperation;
-		this.secondNumber = secondNumber;
+//	public Calculator(int firstNumber, String mathOperation, int secondNumber) {
+//		this.firstNumber = firstNumber;
+//		this.mathOperation = mathOperation;
+//		this.secondNumber = secondNumber;
+//	}
+
+	public void setFirstNumber (int firstNumber) {
+	this.firstNumber = firstNumber;
+	}
+
+	public void setMathOperation (String mathOperation) {
+	this.mathOperation = mathOperation;
+	}
+
+	public void setSecondNumber (int secondNumber) {
+	this.secondNumber = secondNumber;
 	}
 
     void runCalculator() {
