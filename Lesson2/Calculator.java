@@ -14,22 +14,19 @@ public class Calculator {
 
     void runCalculator() {
     	System.out.print("Результат вычислений: ");
-		if (mathOperation.equals("+")) {
-			System.out.println(firstNumber + secondNumber);
-		} else if (mathOperation.equals("-")) {
-			System.out.println(firstNumber - secondNumber);
-		} else if (mathOperation.equals("*")) {
-			System.out.println(firstNumber * secondNumber);
-		} else if (mathOperation.equals("/")) {
-			System.out.println(firstNumber / secondNumber);
-		} else if (mathOperation.equals("%")) {
-			System.out.println(firstNumber % secondNumber);
-		} else if (mathOperation.equals("^")) {
-			int resultOfСalculation = 1; // = 1 - чтобы работало возведение в степень 
-			for (int i = 0; i < secondNumber; i++) {
-				resultOfСalculation *= firstNumber;
+		switch (mathOperation) {
+			case "+": System.out.println(firstNumber + secondNumber); break;
+			case "-": System.out.println(firstNumber - secondNumber); break;
+			case "*": System.out.println(firstNumber * secondNumber); break;
+			case "/": System.out.println(firstNumber / secondNumber); break;
+			case "%": System.out.println(firstNumber % secondNumber); break;
+			case "^": {
+				int resultOfСalculation = 1; // = 1 - чтобы работало возведение в степень 
+				for (int i = 0; i < secondNumber; i++) {
+					resultOfСalculation *= firstNumber;
+				}
+				System.out.println(resultOfСalculation); break;
 			}
-			System.out.println(resultOfСalculation);
 		}
  	}
 }
