@@ -1,8 +1,9 @@
-// описываем экземпляр игрока (имя, загаданное число), иниц. через конструктор
-//
+import java.util.Scanner;
+
 public class Player {
 	private String name;
 	private int number;
+	Scanner inputSymbols = new Scanner(System.in);
 
 	public Player(String name) {
 		this.name = name;
@@ -15,19 +16,9 @@ public class Player {
 	public String getName() {
 		return name;
 	}	
+
+	public void guess(){
+		System.out.print("игрок по имени " + name + ", введите число от 0 до 100: ");
+	    number = inputSymbols.nextInt();
+	}
 }
-
-
-/*
-
-Класс Player должен иметь следующие поля и методы:
-String name — имя игрока (одного!)
-int number — введенное пользователем число
-
-
-числа игроков вводятся игроками )
-"инициализируем их через конструктор (имя + число которое они вводят)" - зачем число вводить через конструктор, только имя (edited)
-игра запускается в классе GuessNumberTest через вызов метода из класса GuessNumber (edited)
-
-
-*/
