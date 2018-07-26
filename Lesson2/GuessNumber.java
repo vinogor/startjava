@@ -1,9 +1,16 @@
+import java.util.Scanner;
+
 public class GuessNumber {
 	public static void startGame() {
 		System.out.println("Старт игры!");
-		
-		Player player1 = new Player("Коля");
-		Player player2 = new Player("Петя");
+
+		Player player1 = new Player();
+		Player player2 = new Player();
+
+		System.out.print("Введите имя 1го игрока (eng): ");
+		player1.chooseName();
+		System.out.print("Введите имя 2го игрока (eng): ");
+		player2.chooseName();
 
 		int numberX = (int) (Math.random() * 101);
 		System.out.println("компьютер загадал число: " + numberX);
@@ -33,6 +40,6 @@ public class GuessNumber {
 			} else if (player2.getNumber() > numberX) {
 				System.out.println(player2.getName() + ", введённое вами число больше того, что загадал компьютер");
 			}
-		} 
+		}
 	}
 } 

@@ -5,8 +5,13 @@ public class Player {
 	private int number;
 	Scanner inputSymbols = new Scanner(System.in);
 
-	public Player(String name) {
-		this.name = name;
+//	public setName(String name) {
+//		this.name = name;
+//	}
+
+
+	public void chooseName() {
+	    name = inputSymbols.next();
 	}
 
 	public int getNumber() {
