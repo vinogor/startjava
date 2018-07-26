@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class GuessNumber {
-	public static void startGame() {
+	public void startGame() {
 		System.out.println("Старт игры!");
 
 		Player player1 = new Player();
