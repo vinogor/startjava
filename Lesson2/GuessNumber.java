@@ -33,6 +33,6 @@ public class GuessNumber {
 			} else if (player2.getNumber() > numberX) {
 				System.out.println(player2.getName() + ", введённое вами число больше того, что загадал компьютер");
 			}
-		}
+		} 
 	}
 } 

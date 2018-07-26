@@ -15,7 +15,7 @@ public class Player {
 	
 	public String getName() {
 		return name;
-	}	
+	}	 
 
 	public void guess(){
 		System.out.print("игрок по имени " + name + ", введите число от 0 до 100: ");
