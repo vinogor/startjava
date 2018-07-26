@@ -1,5 +1,5 @@
 public class GuessNumber {
-	public void startGame() {
+	public static void startGame() {
 		System.out.println("Старт игры!");
 		
 		Player player1 = new Player("Коля");
@@ -11,7 +11,7 @@ public class GuessNumber {
 		boolean player1win = false;
 		boolean player2win = false;
 
-		while (!player1win || !player2win) {
+		while (!(player1win || player2win)) {
 	
 			player1.guess();
 			player2.guess();
