@@ -5,9 +5,9 @@ public class CalculatorTest {
 		
 		Scanner inputSymbols = new Scanner(System.in);
 		Calculator calc = new Calculator();
-    	String startAgain = "да";
+    	String startAgain = "yes";
 
-    	while (startAgain.equals("да")) {
+    	while (startAgain.equals("yes")) {
 	    	System.out.print("Введите первое число: ");
 	    	int firstNumber = inputSymbols.nextInt();
 	    	System.out.print("Введите знак математической операции: ");
@@ -20,13 +20,13 @@ public class CalculatorTest {
 	    	calc.setSecondNumber(secondNumber);
 	    	calc.runCalculator();
 
-	    	System.out.print("Хотите продолжить? [да/нет]: ");
-	    	startAgain = inputSymbols.next(); // почему-то завершает программу при любом ответе. Почему и как исправить? 
+	    	System.out.print("Хотите продолжить? [yes/no]: ");
+	    	startAgain = inputSymbols.next();
 
-	  //  	while (startAgain.equals("нет")) {
-	  //  		System.out.print("Хотите продолжить? [да/нет]: ");
-	  //	    startAgain = inputSymbols.next();	    		 
-	  //  	}
+	    	while (!(startAgain.equals("yes") || startAgain.equals("no"))) {
+	    		System.out.print("Хотите продолжить? [yes/no]: ");
+	  		    startAgain = inputSymbols.next();	    		 
+	    	}
 
 		}	
 	}
