@@ -21,4 +21,4 @@ public class Player {
 		System.out.print("игрок по имени " + name + ", введите число от 0 до 100: ");
 	    number = inputSymbols.nextInt();
 	}
-}
+} 
