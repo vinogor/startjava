@@ -4,7 +4,7 @@ public class GuessNumber {
 	private Player player1;
 	private Player player2;
 	Scanner inputSymbols = new Scanner(System.in);
-	int randomNumber = (int) (Math.random() * 101);
+	int randomNumber;
 
 	public GuessNumber(Player player1, Player player2) {
 		this.player1 = player1;
@@ -13,6 +13,7 @@ public class GuessNumber {
 
 	public void startGame() {
 		System.out.println("Старт игры!");
+		randomNumber = (int) (Math.random() * 101);
 		System.out.print("компьютер загадал число: " + randomNumber);
 		System.out.println();
 
@@ -38,10 +39,8 @@ public class GuessNumber {
 			player.setIsWin(true);
 		} else if (player.getNumber() < randomNumber) {
 			System.out.println(player.getName() + ", введённое вами число меньше того, что загадал компьютер");
-			player.setIsWin(false);
 		} else if (player.getNumber() > randomNumber) {
 			System.out.println(player.getName() + ", введённое вами число больше того, что загадал компьютер");
-			player.setIsWin(false);
 		} 	
 	}
 } 

@@ -16,6 +16,7 @@ public class GuessNumberTest {
     	GuessNumber game = new GuessNumber(player1, player2);
 
     	String startAgain;
+    	
 		do {
 			game.startGame();
 			do {
