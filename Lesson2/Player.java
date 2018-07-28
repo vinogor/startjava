@@ -2,7 +2,6 @@ public class Player {
 	private String name;
 	private int number;
 	private boolean isWin;
-	private int randomNumber;
 
 	public Player(String name) {
 		this.name = name;
