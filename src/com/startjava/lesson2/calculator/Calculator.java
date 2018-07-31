@@ -1,3 +1,5 @@
+package com.startjava.lesson2.calculator;
+
 public class Calculator {
 
 	private int firstNumber;
@@ -22,7 +24,7 @@ public class Calculator {
 	this.secondNumber = secondNumber;
 	}
 
-    void runCalculator() {
+    public void runCalculator() {
     	System.out.print("Результат вычислений: ");
 		switch (mathOperation) {
 			case "+": System.out.println(firstNumber + secondNumber); break;

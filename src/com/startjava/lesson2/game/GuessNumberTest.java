@@ -1,3 +1,4 @@
+package com.startjava.lesson2.game;
 import java.util.Scanner;
 
 public class GuessNumberTest {
@@ -5,11 +6,11 @@ public class GuessNumberTest {
 
     	Scanner inputSymbols = new Scanner(System.in);
     	
-		System.out.print("Р’РІРµРґРёС‚Рµ РёРјСЏ 1РіРѕ РёРіСЂРѕРєР° (eng): ");
+		System.out.print("Введите имя 1го игрока (eng): ");
 		String namePlayer1 = inputSymbols.next();
 		Player player1 = new Player(namePlayer1);
 
-		System.out.print("Р’РІРµРґРёС‚Рµ РёРјСЏ 2РіРѕ РёРіСЂРѕРєР° (eng): ");
+		System.out.print("Введите имя 2го игрока (eng): ");
 		String namePlayer2 = inputSymbols.next();
 		Player player2 = new Player(namePlayer2);
 
@@ -20,7 +21,7 @@ public class GuessNumberTest {
 		do {
 			game.startGame();
 			do {
-	    		System.out.print("РҐРѕС‚РёС‚Рµ РїСЂРѕРґРѕР»Р¶РёС‚СЊ? [yes/no]: ");
+	    		System.out.print("Хотите продолжить? [yes/no]: ");
 	  		    startAgain = inputSymbols.next();	    		 
 	  		} while (!(startAgain.equals("yes") || startAgain.equals("no")));
 		} while (startAgain.equals("yes"));
