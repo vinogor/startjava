@@ -10,14 +10,16 @@ public class CalculatorTest {
     	String startAgain = "yes";
 
     	while (startAgain.equals("yes")) {
-	    	System.out.print("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ: ");
+	    	System.out.print("Введите первое число: ");
 	    	int firstNumber = inputSymbols.nextInt();
-	    	System.out.print("Р’РІРµРґРёС‚Рµ Р·РЅР°Рє РјР°С‚РµРјР°С‚РёС‡РµСЃРєРѕР№ РѕРїРµСЂР°С†РёРё: ");
+	    	System.out.print("Введите знак математической операции: ");
 	    	inputSymbols.nextLine();
 	    	String mathOperation = inputSymbols.nextLine();
-	   // 	РєРѕРіРґР° РїРёСЃР°Р» [nextLine()] - С‚Рѕ РєРѕРЅСЃРѕР»СЊ РЅРµ РїСЂРµРґР»Р°РіР°Р»Р° РЅРёС‡РµРіРѕ РІРІРµСЃС‚Рё. РџРѕС‡РµРјСѓ?!
-	   //   - РїРѕС‚РѕРјСѓ С‡С‚Рѕ РІ Р±СѓС„РµСЂРµ РѕСЃС‚Р°С‘С‚СЃСЏ СЃРёРјРІРѕР» РїРµСЂРµРЅРѕСЃР° СЃС‚СЂРѕРєРё РѕС‚ РїСЂРµРґС‹РґСѓС‰РµР№ РєРѕРјР°РЅРґС‹, РєРѕС‚РѕСЂР°СЏ Р·Р°Р±СЂР°Р»Р° СЃРµР±Рµ С‚РѕР»СЊРєРѕ С†РёС„СЂС‹
-	    	System.out.print("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ: ");
+	   // 	когда писал [nextLine()] - то консоль не предлагала ничего ввести. Почему?!
+	   //   - потому что в буфере остаётся символ переноса строки от предыдущей команды, которая забрала себе только цифры
+	   //   решение: ????
+
+	    	System.out.print("Введите второе число: ");
 	    	int secondNumber = inputSymbols.nextInt();
 
 	    	calc.setFirstNumber(firstNumber);
@@ -25,11 +27,11 @@ public class CalculatorTest {
 	    	calc.setSecondNumber(secondNumber);
 	    	calc.runCalculator();
 
-	    	System.out.print("РҐРѕС‚РёС‚Рµ РїСЂРѕРґРѕР»Р¶РёС‚СЊ? [yes/no]: ");
+	    	System.out.print("Хотите продолжить? [yes/no]: ");
 	    	startAgain = inputSymbols.next();
 
 	    	while (!(startAgain.equals("yes") || startAgain.equals("no"))) {
-	    		System.out.print("РҐРѕС‚РёС‚Рµ РїСЂРѕРґРѕР»Р¶РёС‚СЊ? [yes/no]: ");
+	    		System.out.print("Хотите продолжить? [yes/no]: ");
 	  		    startAgain = inputSymbols.next();	    		 
 	    	}
 

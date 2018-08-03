@@ -25,7 +25,7 @@ public class Calculator {
 	}
 
     public void runCalculator() {
-    	System.out.print("Ğ ĞµĞ·ÑƒĞ»ÑŒÑ‚Ğ°Ñ‚ Ğ²Ñ‹Ñ‡Ğ¸ÑĞ»ĞµĞ½Ğ¸Ğ¹: ");
+    	System.out.print("Ğåçóëüòàò âû÷èñëåíèé: ");
 		switch (mathOperation) {
 			case "+": System.out.println(firstNumber + secondNumber); break;
 			case "-": System.out.println(firstNumber - secondNumber); break;
@@ -33,11 +33,11 @@ public class Calculator {
 			case "/": System.out.println(firstNumber / secondNumber); break;
 			case "%": System.out.println(firstNumber % secondNumber); break;
 			case "^": {
-				int resultOfĞ¡alculation = 1; // = 1 - Ñ‡Ñ‚Ğ¾Ğ±Ñ‹ Ñ€Ğ°Ğ±Ğ¾Ñ‚Ğ°Ğ»Ğ¾ Ğ²Ğ¾Ğ·Ğ²ĞµĞ´ĞµĞ½Ğ¸Ğµ Ğ² ÑÑ‚ĞµĞ¿ĞµĞ½ÑŒ 
+				int resultOfÑalculation = 1; // = 1 - ÷òîáû ğàáîòàëî âîçâåäåíèå â ñòåïåíü 
 				for (int i = 0; i < secondNumber; i++) {
-					resultOfĞ¡alculation *= firstNumber;
+					resultOfÑalculation *= firstNumber;
 				}
-				System.out.println(resultOfĞ¡alculation); break;
+				System.out.println(resultOfÑalculation); break;
 			}
 		}
  	}
