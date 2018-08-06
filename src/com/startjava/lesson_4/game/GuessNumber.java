@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class GuessNumber {
 	private Player player1;
 	private Player player2;
-	Scanner inputSymbols = new Scanner(System.in);
-	int randomNumber;
-	int numberOfAttempt;
+	private Scanner inputSymbols = new Scanner(System.in);
+	private int randomNumber;
+	private int numberOfAttempt;
 
 	public GuessNumber(Player player1, Player player2) {
 		this.player1 = player1;
@@ -22,6 +22,7 @@ public class GuessNumber {
 
 		player1.setIsWin(false);
 		player2.setIsWin(false);
+		numberOfAttempt = 0;
 
 		while (!(player1.getIsWin() || player2.getIsWin())) {
 			numberOfAttempt++;
@@ -32,8 +33,8 @@ public class GuessNumber {
 			System.out.println("Попытка №" + numberOfAttempt);
 		    inputNumber(player1, numberOfAttempt);
 		    inputNumber(player2, numberOfAttempt);
-		    whoWin(player1, randomNumber, numberOfAttempt);
-		    whoWin(player2, randomNumber, numberOfAttempt);
+		    whoWin(player1, numberOfAttempt);
+		    whoWin(player2, numberOfAttempt);
 		}
 	}
 
@@ -41,26 +42,28 @@ public class GuessNumber {
 			System.out.print("Игрок по имени " + player.getName() + ", введите число от 0 до 100: ");
 			player.setNumberOfAttempt(numberOfAttempt);
 		    player.setNumber(inputSymbols.nextInt());
-
 	}
 
-	private void whoWin(Player player, int randomNumber, int numberOfAttempt) {
+	private void whoWin(Player player, int numberOfAttempt) {
 		if (player.getNumber() == randomNumber) {
-			System.out.println("Игра окончена. Победитель: " + player.getName());
-			System.out.println("Игрок " + player.getName() + " угадал число " + randomNumber + " с " + numberOfAttempt + " попытки");
-			System.out.print("Введённые игроком " + player.getName() + " числа: ");
-
-			int[] realInputNumbers = Arrays.copyOf(player.getInputNumbers(), numberOfAttempt);
-			for (int i = 0; i < numberOfAttempt; i++) {
-				System.out.print(realInputNumbers[i] + " ");
-			}
-			System.out.println();
-			player.setIsWin(true);
+			playerWin(player, numberOfAttempt);
 		} else if (player.getNumber() < randomNumber) {
 			System.out.println(player.getName() + ", введённое вами число меньше того, что загадал компьютер");
 		} else if (player.getNumber() > randomNumber) {
 			System.out.println(player.getName() + ", введённое вами число больше того, что загадал компьютер");
 		} 	
+	}
+
+	private  void playerWin(Player player, int numberOfAttempt){
+		System.out.println("Игра окончена. Победитель: " + player.getName());
+		System.out.println("Игрок " + player.getName() + " угадал число " + randomNumber + " с " + numberOfAttempt + " попытки");
+		System.out.print("Введённые игроком " + player.getName() + " числа: ");
+		int[] realInputNumbers = Arrays.copyOf(player.getInputNumbers(), numberOfAttempt);
+		for (int i = 0; i < numberOfAttempt; i++) {
+			System.out.print(realInputNumbers[i] + " ");
+		}
+		System.out.println();
+		player.setIsWin(true);
 	}
 }
 

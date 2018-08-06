@@ -18,7 +18,7 @@ public class Calculator {
         this.secondNumber = secondNumber;
     }
 
-    public void runCalculator() {
+    public void calculate() {
         System.out.print("Результат вычислений: ");
         switch (mathOperation) {
             case "+":

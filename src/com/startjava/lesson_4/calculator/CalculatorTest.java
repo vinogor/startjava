@@ -16,11 +16,8 @@ public class CalculatorTest {
             System.out.print("Введите математическое выражение: ");
             String mathExpression = inputSymbols.nextLine();
             String partsOfMathExpression[] = mathExpression.split(" ");
-
-            calc.setFirstNumber(Integer.parseInt(partsOfMathExpression[0]));
-            calc.setMathOperation(partsOfMathExpression[1]);
-            calc.setSecondNumber(Integer.parseInt(partsOfMathExpression[2]));
-            calc.runCalculator();
+            sendPartsOfMathExpression(partsOfMathExpression, calc);
+            calc.calculate();
 
             do {
                 System.out.print("Хотите продолжить? [yes/no]: ");
@@ -28,5 +25,11 @@ public class CalculatorTest {
             } while (!(startAgain.equals("yes") || startAgain.equals("no")));
             inputSymbols.nextLine();
         } while (startAgain.equals("yes"));
+    }
+
+    private static void sendPartsOfMathExpression(String[] parts, Calculator calc) {
+        calc.setFirstNumber(Integer.parseInt(parts[0]));
+        calc.setMathOperation(parts[1]);
+        calc.setSecondNumber(Integer.parseInt(parts[2]));
     }
 }

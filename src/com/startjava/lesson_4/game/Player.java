@@ -15,7 +15,7 @@ public class Player {
 		return name;
 	}
 
-	public void setNumber (int number) {
+	public void setNumber(int number) {
 		this.number = number;
 		inputNumbers[numberOfAttempt-1] = number;
 	}
@@ -24,7 +24,7 @@ public class Player {
 		return number;
 	}
 
-	public void setIsWin (boolean isWin) {
+	public void setIsWin(boolean isWin) {
 		this.isWin = isWin;
 	}
 
@@ -38,5 +38,9 @@ public class Player {
 
 	public int[] getInputNumbers() {
 		return inputNumbers;
+	}
+
+	public void setInputNumbers(int[] inputNumbers) {
+		this.inputNumbers = inputNumbers;
 	}
 }

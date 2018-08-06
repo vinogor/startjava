@@ -13,27 +13,20 @@
  *
  */
 
-
 package com.startjava.lesson_4.game;
 import java.util.Scanner;
 
 public class GuessNumberTest {
+	static Scanner inputSymbols = new Scanner(System.in);
     public static void main(String[] args) {
 
-    	Scanner inputSymbols = new Scanner(System.in);
-    	
 		System.out.print("¬ведите им€ 1го игрока (eng): ");
-		String namePlayer1 = inputSymbols.next();
-		Player player1 = new Player(namePlayer1);
-
+		Player player1 = new Player(inputSymbols.next());
 		System.out.print("¬ведите им€ 2го игрока (eng): ");
-		String namePlayer2 = inputSymbols.next();
-		Player player2 = new Player(namePlayer2);
-
+		Player player2 = new Player(inputSymbols.next());
     	GuessNumber game = new GuessNumber(player1, player2);
-
     	String startAgain;
-    	
+
 		do {
 			game.startGame();
 			do {
@@ -41,7 +34,7 @@ public class GuessNumberTest {
 	  		    startAgain = inputSymbols.next();	    		 
 	  		} while (!(startAgain.equals("yes") || startAgain.equals("no")));
 		} while (startAgain.equals("yes"));
-    } 
+    }
 }
 
 		
