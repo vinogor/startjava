@@ -17,8 +17,7 @@ public class GuessNumber {
 	public void startGame() {
 		System.out.println("Старт игры! У каждого игрока есть 10 попыток.");
 		randomNumber = (int) (Math.random() * 101);
-		System.out.print("Компьютер загадал число: " + randomNumber);
-		System.out.println();
+		System.out.println("Компьютер загадал число: " + randomNumber);
 
 		player1.setIsWin(false);
 		player2.setIsWin(false);
@@ -31,22 +30,22 @@ public class GuessNumber {
 				break;
 			}
 			System.out.println("Попытка №" + numberOfAttempt);
-		    inputNumber(player1, numberOfAttempt);
-		    inputNumber(player2, numberOfAttempt);
-		    whoWin(player1, numberOfAttempt);
-		    whoWin(player2, numberOfAttempt);
+		    inputNumber(player1);
+		    inputNumber(player2);
+		    whoWin(player1);
+		    whoWin(player2);
 		}
 	}
 
-	private void inputNumber(Player player, int numberOfAttempt) {
+	private void inputNumber(Player player) {
 			System.out.print("Игрок по имени " + player.getName() + ", введите число от 0 до 100: ");
 			player.setNumberOfAttempt(numberOfAttempt);
 		    player.setNumber(inputSymbols.nextInt());
 	}
 
-	private void whoWin(Player player, int numberOfAttempt) {
+	private void whoWin(Player player) {
 		if (player.getNumber() == randomNumber) {
-			playerWin(player, numberOfAttempt);
+			playerWin(player);
 		} else if (player.getNumber() < randomNumber) {
 			System.out.println(player.getName() + ", введённое вами число меньше того, что загадал компьютер");
 		} else if (player.getNumber() > randomNumber) {
@@ -54,16 +53,20 @@ public class GuessNumber {
 		} 	
 	}
 
-	private  void playerWin(Player player, int numberOfAttempt){
+	private  void playerWin(Player player){
 		System.out.println("Игра окончена. Победитель: " + player.getName());
 		System.out.println("Игрок " + player.getName() + " угадал число " + randomNumber + " с " + numberOfAttempt + " попытки");
 		System.out.print("Введённые игроком " + player.getName() + " числа: ");
+		outputAllPlayerAttempts(player);
+		player.setIsWin(true);
+	}
+
+	private void outputAllPlayerAttempts(Player player) {
 		int[] realInputNumbers = Arrays.copyOf(player.getInputNumbers(), numberOfAttempt);
 		for (int i = 0; i < numberOfAttempt; i++) {
 			System.out.print(realInputNumbers[i] + " ");
 		}
 		System.out.println();
-		player.setIsWin(true);
 	}
 }
 

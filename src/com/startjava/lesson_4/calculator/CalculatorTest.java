@@ -7,22 +7,18 @@ package com.startjava.lesson_4.calculator;
 import java.util.Scanner;
 
 public class CalculatorTest {
-    public static void main(String[] args) {
-        Scanner inputSymbols = new Scanner(System.in);
-        Calculator calc = new Calculator();
-        String startAgain;
+    private static String startAgain;
+    private static Scanner inputSymbols = new Scanner(System.in);
 
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
         do {
             System.out.print("Введите математическое выражение: ");
             String mathExpression = inputSymbols.nextLine();
             String partsOfMathExpression[] = mathExpression.split(" ");
             sendPartsOfMathExpression(partsOfMathExpression, calc);
             calc.calculate();
-
-            do {
-                System.out.print("Хотите продолжить? [yes/no]: ");
-                startAgain = inputSymbols.next();
-            } while (!(startAgain.equals("yes") || startAgain.equals("no")));
+            wantToContinue();
             inputSymbols.nextLine();
         } while (startAgain.equals("yes"));
     }
@@ -31,5 +27,12 @@ public class CalculatorTest {
         calc.setFirstNumber(Integer.parseInt(parts[0]));
         calc.setMathOperation(parts[1]);
         calc.setSecondNumber(Integer.parseInt(parts[2]));
+    }
+
+    private static void wantToContinue() {
+        do {
+            System.out.print("Хотите продолжить? [yes/no]: ");
+            startAgain = inputSymbols.next();
+        } while (!(startAgain.equals("yes") || startAgain.equals("no")));
     }
 }

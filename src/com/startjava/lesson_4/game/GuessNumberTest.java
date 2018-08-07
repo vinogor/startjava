@@ -17,7 +17,9 @@ package com.startjava.lesson_4.game;
 import java.util.Scanner;
 
 public class GuessNumberTest {
-	static Scanner inputSymbols = new Scanner(System.in);
+	private static Scanner inputSymbols = new Scanner(System.in);
+	private static String startAgain;
+
     public static void main(String[] args) {
 
 		System.out.print("¬ведите им€ 1го игрока (eng): ");
@@ -25,16 +27,19 @@ public class GuessNumberTest {
 		System.out.print("¬ведите им€ 2го игрока (eng): ");
 		Player player2 = new Player(inputSymbols.next());
     	GuessNumber game = new GuessNumber(player1, player2);
-    	String startAgain;
 
 		do {
 			game.startGame();
-			do {
-	    		System.out.print("’отите продолжить? [yes/no]: ");
-	  		    startAgain = inputSymbols.next();	    		 
-	  		} while (!(startAgain.equals("yes") || startAgain.equals("no")));
+			wantToContinue();
 		} while (startAgain.equals("yes"));
     }
+
+	private static void wantToContinue() {
+		do {
+			System.out.print("’отите продолжить? [yes/no]: ");
+			startAgain = inputSymbols.next();
+		} while (!(startAgain.equals("yes") || startAgain.equals("no")));
+	}
 }
 
 		
