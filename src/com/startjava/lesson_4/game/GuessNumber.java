@@ -17,16 +17,9 @@ public class GuessNumber {
 
     public void startGame() {
         System.out.println("Старт игры! У каждого игрока есть 10 попыток.");
-
         createRandomNumber();
-//		randomNumber = (int) (Math.random() * 101);
-
         System.out.println("Компьютер загадал число: " + randomNumber);
-
         resetCounters();
-//		player1.setIsWin(false);
-//		player2.setIsWin(false);
-//		numberOfAttempt = 0;
 
         while (!(player1.getIsWin() || player2.getIsWin())) {
             numberOfAttempt++;
@@ -40,6 +33,16 @@ public class GuessNumber {
             checkVictory(player1);
             checkVictory(player2);
         }
+    }
+
+    private void createRandomNumber() {
+        randomNumber = (int) (Math.random() * 101);
+    }
+
+    private void resetCounters() {
+        player1.setIsWin(false);
+        player2.setIsWin(false);
+        numberOfAttempt = 0;
     }
 
     private void inputNumber(Player player) {
@@ -72,16 +75,6 @@ public class GuessNumber {
             System.out.print(realInputNumbers[i] + " ");
         }
         System.out.println();
-    }
-
-    private void createRandomNumber() {
-        randomNumber = (int) (Math.random() * 101);
-    }
-
-    private void resetCounters() {
-        player1.setIsWin(false);
-        player2.setIsWin(false);
-        numberOfAttempt = 0;
     }
 }
 

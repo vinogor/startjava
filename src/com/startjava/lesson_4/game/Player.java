@@ -11,6 +11,8 @@ public class Player {
         this.name = name;
     }
 
+
+
     public String getName() {
         return name;
     }
@@ -38,9 +40,5 @@ public class Player {
 
     public int[] getInputNumbers() {
         return inputNumbers;
-    }
-
-    public void setInputNumbers(int[] inputNumbers) {
-        this.inputNumbers = inputNumbers;
     }
 }
