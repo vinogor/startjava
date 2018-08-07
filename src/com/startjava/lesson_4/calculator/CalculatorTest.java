@@ -38,9 +38,9 @@ public class CalculatorTest {
     }
 
     private static void inputMathExpression(Calculator calc) {
-            System.out.print("¬ведите математическое выражение: ");
-            String mathExpression = inputSymbols.nextLine();
-            String partsOfMathExpression[] = mathExpression.split(" ");
-            init(partsOfMathExpression, calc);
+        System.out.print("¬ведите математическое выражение: ");
+        String mathExpression = inputSymbols.nextLine();
+        String partsOfMathExpression[] = mathExpression.split(" ");
+        init(partsOfMathExpression, calc);
     }
 }
