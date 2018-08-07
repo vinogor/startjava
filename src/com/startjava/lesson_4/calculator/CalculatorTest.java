@@ -13,26 +13,34 @@ public class CalculatorTest {
     public static void main(String[] args) {
         Calculator calc = new Calculator();
         do {
-            System.out.print("¬ведите математическое выражение: ");
-            String mathExpression = inputSymbols.nextLine();
-            String partsOfMathExpression[] = mathExpression.split(" ");
-            sendPartsOfMathExpression(partsOfMathExpression, calc);
+            inputMathExpression(calc);
+//            System.out.print("¬ведите математическое выражение: ");
+//            String mathExpression = inputSymbols.nextLine();
+//            String partsOfMathExpression[] = mathExpression.split(" ");
+//            sendPartsOfMathExpression(partsOfMathExpression, calc);
             calc.calculate();
-            wantToContinue();
+            checkDesireToContinue();
             inputSymbols.nextLine();
         } while (startAgain.equals("yes"));
     }
 
-    private static void sendPartsOfMathExpression(String[] parts, Calculator calc) {
+    private static void init(String[] parts, Calculator calc) {
         calc.setFirstNumber(Integer.parseInt(parts[0]));
         calc.setMathOperation(parts[1]);
         calc.setSecondNumber(Integer.parseInt(parts[2]));
     }
 
-    private static void wantToContinue() {
+    private static void checkDesireToContinue() {
         do {
             System.out.print("’отите продолжить? [yes/no]: ");
             startAgain = inputSymbols.next();
         } while (!(startAgain.equals("yes") || startAgain.equals("no")));
+    }
+
+    private static void inputMathExpression(Calculator calc) {
+            System.out.print("¬ведите математическое выражение: ");
+            String mathExpression = inputSymbols.nextLine();
+            String partsOfMathExpression[] = mathExpression.split(" ");
+            init(partsOfMathExpression, calc);
     }
 }

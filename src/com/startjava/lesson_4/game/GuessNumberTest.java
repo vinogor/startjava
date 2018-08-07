@@ -22,23 +22,40 @@ public class GuessNumberTest {
 
     public static void main(String[] args) {
 
-		System.out.print("¬ведите им€ 1го игрока (eng): ");
-		Player player1 = new Player(inputSymbols.next());
-		System.out.print("¬ведите им€ 2го игрока (eng): ");
-		Player player2 = new Player(inputSymbols.next());
-    	GuessNumber game = new GuessNumber(player1, player2);
+		GuessNumber game = enterNames();
+//		System.out.print("¬ведите им€ 1го игрока (eng): ");
+//		Player player1 = new Player(inputSymbols.next());
+//		System.out.print("¬ведите им€ 2го игрока (eng): ");
+//		Player player2 = new Player(inputSymbols.next());
+//    	GuessNumber game = new GuessNumber(player1, player2);
 
-		do {
-			game.startGame();
-			wantToContinue();
-		} while (startAgain.equals("yes"));
+		initGame(game);
+//		do {
+//			game.startGame();
+//			checkDesireToContinue();
+//		} while (startAgain.equals("yes"));
     }
 
-	private static void wantToContinue() {
+	private static void checkDesireToContinue() {
 		do {
 			System.out.print("’отите продолжить? [yes/no]: ");
 			startAgain = inputSymbols.next();
 		} while (!(startAgain.equals("yes") || startAgain.equals("no")));
+	}
+
+	private static GuessNumber enterNames() {
+		System.out.print("¬ведите им€ 1го игрока (eng): ");
+		Player player1 = new Player(inputSymbols.next());
+		System.out.print("¬ведите им€ 2го игрока (eng): ");
+		Player player2 = new Player(inputSymbols.next());
+    	return new GuessNumber(player1, player2);
+	}
+
+	private static void initGame(GuessNumber game) {
+		do {
+			game.startGame();
+			checkDesireToContinue();
+		} while (startAgain.equals("yes"));
 	}
 }
 
