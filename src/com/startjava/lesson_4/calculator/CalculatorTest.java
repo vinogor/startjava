@@ -5,25 +5,27 @@ import java.util.Scanner;
 public class CalculatorTest {
     private static String startAgain;
     private static Scanner inputSymbols = new Scanner(System.in);
-    private static String mathExpression;
+
 
     public static void main(String[] args) {
         Calculator calc = new Calculator();
+        String mathExpression;
+
         do {
-            inputMathExpression(calc);
-            init(calc);
+            mathExpression = inputMathExpression();
+            init(calc,  mathExpression);
             calc.calculate();
             checkDesireToContinue();
-            inputSymbols.nextLine();
+  //          inputSymbols.nextLine();
         } while (startAgain.equals("yes"));
     }
 
-    private static void inputMathExpression(Calculator calc) {
+    private static String inputMathExpression() {
         System.out.print("¬ведите математическое выражение: ");
-        mathExpression = inputSymbols.nextLine();
+        return inputSymbols.nextLine();
     }
 
-    private static void init(Calculator calc) {
+    private static void init(Calculator calc, String mathExpression) {
         String partsOfMathExpression[] = mathExpression.split(" ");
         calc.setFirstNumber(Integer.parseInt(partsOfMathExpression[0]));
         calc.setMathOperation(partsOfMathExpression[1]);

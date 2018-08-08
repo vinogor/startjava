@@ -17,7 +17,7 @@ public class CalculatorTest {
 	    	String mathOperation = inputSymbols.nextLine();
 	   // 	когда писал [nextLine()] - то консоль не предлагала ничего ввести. Почему?!
 	   //   ответ: потому что в буфере остаётся символ переноса строки от предыдущей команды, которая забрала себе только цифры
-	   //   решение: команда inputSymbols.nextLine(); заберёт на себя этот мешающий символ
+	   //   решение: дополнительная команда inputSymbols.nextLine(); заберёт на себя этот мешающий символ
 
 	    	System.out.print("Введите второе число: ");
 	    	int secondNumber = inputSymbols.nextInt();
