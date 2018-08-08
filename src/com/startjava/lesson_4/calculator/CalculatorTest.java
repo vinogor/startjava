@@ -16,7 +16,7 @@ public class CalculatorTest {
             init(calc,  mathExpression);
             calc.calculate();
             checkDesireToContinue();
-  //          inputSymbols.nextLine();
+            inputSymbols.nextLine();
         } while (startAgain.equals("yes"));
     }
 
