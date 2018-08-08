@@ -16,7 +16,6 @@ public class CalculatorTest {
             init(calc,  mathExpression);
             calc.calculate();
             checkDesireToContinue();
-            inputSymbols.nextLine();
         } while (startAgain.equals("yes"));
     }
 
@@ -36,6 +35,7 @@ public class CalculatorTest {
         do {
             System.out.print("Хотите продолжить? [yes/no]: ");
             startAgain = inputSymbols.next();
+            inputSymbols.nextLine();
         } while (!(startAgain.equals("yes") || startAgain.equals("no")));
     }
 }
