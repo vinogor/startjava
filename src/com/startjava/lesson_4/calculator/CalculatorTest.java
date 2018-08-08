@@ -6,7 +6,6 @@ public class CalculatorTest {
     private static String startAgain;
     private static Scanner inputSymbols = new Scanner(System.in);
 
-
     public static void main(String[] args) {
         Calculator calc = new Calculator();
         String mathExpression;
