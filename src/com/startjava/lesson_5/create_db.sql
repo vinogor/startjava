@@ -1,7 +1,7 @@
 \l
-CREATE DATABASE jaegers1;
+CREATE DATABASE jaegers;
 \l
-\connect jaegers1;
+\connect jaegers;
 CREATE TABLE CharacteristicsOfrobots (
 	id 				SERIAL PRIMARY KEY,
 	modelName 		TEXT,
