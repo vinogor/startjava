@@ -11,4 +11,4 @@ INSERT INTO Characteristicsofrobots(modelName, mark, height, weight, status, ori
 		('Eden Assassin', 'Mark-2', '178', '1547', 'Destroyed', 'Russia', '2016-10-15', '8'),
 		('Tacit Ronin', 'Mark-1', '244', '7450', 'Destroyed', 'Japan', '2015-12-06', '3')
 	;
-	\q
+\q
