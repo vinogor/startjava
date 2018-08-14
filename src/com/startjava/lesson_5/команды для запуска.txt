@@ -1,0 +1,7 @@
+\i d:/прогерство/TopJava/startjava/src/com/startjava/lesson_5/create_db.sql
+
+\i d:/прогерство/TopJava/startjava/src/com/startjava/lesson_5/init_db.sql
+
+\i d:/прогерство/TopJava/startjava/src/com/startjava/lesson_5/querise.sql
+
+
