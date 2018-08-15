@@ -1,4 +1,4 @@
-INSERT INTO Characteristicsofrobots (modelName, mark, height, weight, status, origin, launch, kaijuKill)
+INSERT INTO Characteristics_of_robots (modelName, mark, height, weight, status, origin, launch, kaijuKill)
     VALUES ('Guardian Bravo',  'Mark-6', '240', '1975', 'Destroyed', 'USA',       '2033-12-15', '2'),
            ('Titan Redeemer',  'Mark-6', '250', '2014', 'Destroyed', 'Russia',    '2035-02-03', '3'),
            ('Mammoth Apostle', 'Mark-4', '184', '1751', 'Destroyed', 'Canada',    '2018-10-11', '0'),
