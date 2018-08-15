@@ -9,6 +9,7 @@ SELECT modelname
 FROM Characteristicsofrobots
 WHERE mark = 'Mark-6'
    OR mark = 'Mark-5';
+
 SELECT *
 FROM Characteristicsofrobots
 ORDER BY mark DESC;
@@ -38,4 +39,5 @@ WHERE status = 'Destroyed';
 
 SELECT *
 FROM Characteristicsofrobots;
+
 \q

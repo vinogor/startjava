@@ -2,7 +2,7 @@
 CREATE DATABASE jaegers;
 \l
 \connect jaegers;
-CREATE TABLE CharacteristicsOfrobots(
+CREATE TABLE Characteristicsofrobots(
     id        SERIAL PRIMARY KEY,
     modelName TEXT,
     mark      CHAR(6),
@@ -14,5 +14,5 @@ CREATE TABLE CharacteristicsOfrobots(
     kaijuKill SMALLINT
 );
 \d
-\d 'CharacteristicsOfrobots'
+\d 'Characteristicsofrobots'
 \q
